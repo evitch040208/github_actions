@@ -1,0 +1,21 @@
+name: distribute_master
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  distribute:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: master_to_develop
+        uses: devmasx/merge-branch@1.4.0
+        with:
+          type: now
+          target_branch: develop
+          from_branch: master
+          github_token: ${{ secrets.GITHUB_TOKEN }}
