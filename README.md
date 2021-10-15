@@ -1,1 +1,2 @@
 GitHub Actionsを試すためのリポジトリです。
+test
