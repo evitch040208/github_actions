@@ -14,13 +14,13 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  distribute:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:          
-      - name: distribute
+      - name: master_to_develop
         uses: devmasx/merge-branch@1.4.0
         with:
           # The name of target branch to merge
@@ -28,4 +28,4 @@ jobs:
           # Alias head_to_merge input
           from_branch: master
           # Github token
-          github_token: $GITHUB_TOKEN
+          github_token: ${{ secrets.GITHUB_TOKEN }}
