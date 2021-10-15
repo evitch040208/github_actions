@@ -1,4 +1,4 @@
-name: distribute_master
+name: Distribute Master
 
 on:
   push:
