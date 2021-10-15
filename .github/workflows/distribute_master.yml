@@ -25,5 +25,5 @@ jobs:
         with:
           type: now
           target_branch: develop
-          from_branch: stage
+          from_branch: stage01
           github_token: ${{ secrets.GITHUB_TOKEN }}
