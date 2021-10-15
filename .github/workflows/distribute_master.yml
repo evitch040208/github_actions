@@ -19,3 +19,11 @@ jobs:
           target_branch: develop
           from_branch: master
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: master_to_stage
+        uses: devmasx/merge-branch@1.4.0
+        with:
+          type: now
+          target_branch: develop
+          from_branch: stage
+          github_token: ${{ secrets.GITHUB_TOKEN }}
