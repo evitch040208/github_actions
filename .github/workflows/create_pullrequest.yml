@@ -1,0 +1,26 @@
+name: Create PullRequest
+
+on:
+  push:
+    branches: [ master ]
+  workflow_dispatch:
+
+jobs:
+  distribute:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: master_to_develop
+        uses: peter-evans/create-pull-request@v3.10.1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
+          delete-branch: false
+          base: develop
+          title: master to develop
+          body: # optional
+          labels: # optional
+          assignees: # optional
+          reviewers: # optional
