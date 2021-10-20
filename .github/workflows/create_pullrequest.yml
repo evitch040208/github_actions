@@ -10,17 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v2
 
-      - name: master_to_develop
-        uses: peter-evans/create-pull-request@v3.10.1
+      - name: master to develop
+        uses: repo-sync/pull-request@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: master
-          delete-branch: false
-          base: develop
-          title: master to develop
-          body: # optional
-          labels: # optional
-          assignees: # optional
-          reviewers: # optional
+          destination_branch: "develop"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
