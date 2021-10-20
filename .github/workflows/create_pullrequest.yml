@@ -17,3 +17,4 @@ jobs:
         with:
           destination_branch: "develop"
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          pr_title: "master to develop"
