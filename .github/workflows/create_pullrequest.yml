@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  distribute:
+  pullrequest:
     runs-on: ubuntu-latest
 
     steps:
