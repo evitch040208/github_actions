@@ -2,11 +2,11 @@ name: Auto Approve
 
 on:
   pull_request:
-    branches: [ develop, master ]
+    branches: [ develop, stage01 ]
   workflow_dispatch:
 
 jobs:
-  pullrequest:
+  approve:
     runs-on: ubuntu-latest
 
     steps:
