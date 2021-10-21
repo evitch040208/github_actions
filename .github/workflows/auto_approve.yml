@@ -12,7 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: hmarr/auto-approve-action@v2
+      - name: approve
+        run: echo "This PR is opened by ${{ github.event.pull_request.user.login }}."
+        uses: hmarr/auto-approve-action@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-        run: echo "This PR is opened by ${{ github.event.pull_request.user.login }}."
