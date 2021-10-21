@@ -16,12 +16,12 @@ jobs:
         uses: repo-sync/pull-request@v2
         with:
           destination_branch: "develop"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.BOT_TOKEN }}
           pr_title: "master to develop"
 
       - name: master to stage01
         uses: repo-sync/pull-request@v2
         with:
           destination_branch: "stage01"
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.BOT_TOKEN }}
           pr_title: "master to stage01"
