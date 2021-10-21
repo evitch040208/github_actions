@@ -22,6 +22,6 @@ jobs:
       - name: master to stage01
         uses: repo-sync/pull-request@v2
         with:
-          destination_branch: "develop"
+          destination_branch: "stage01"
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pr_title: "master to stage01"
